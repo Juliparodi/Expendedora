@@ -1,6 +1,6 @@
 ﻿using ExpendedoraLibrary.Entities;
 using System;
-
+using System.Collections.Generic;
 
 namespace ExpendedoraConsole
 {
@@ -13,7 +13,14 @@ namespace ExpendedoraConsole
             bool salir = true;
 
             Expendedora expendedora = new Expendedora();
-            Lata lata = new Lata();
+            List<Lata> latas = new List<Lata>();
+            Lata lata = new Lata("01", "coca-cola", "coca", 10, 100, 100);
+            Lata lata2 = new Lata("02", "sprite", "limon", 10, 100, 100);
+            latas.Add(lata);
+            latas.Add(lata2);
+            expendedora.agregarLatas(latas);
+
+
 
             Console.Write("Bienvenido a la maquina expendedora mas premium de Argentina");
 
@@ -55,7 +62,7 @@ namespace ExpendedoraConsole
                             break;
 
                         case 2:
-                            expendedora.agregarLata(ingresarLata(expendedora));
+                            expendedora.agregarLata(recolectarParametros();
                             break;
                             
 
@@ -85,6 +92,22 @@ namespace ExpendedoraConsole
             Console.WriteLine("Ingrese nombre: ");
             lata2.Volumen = Convert.ToDouble(Console.ReadLine());
             return lata2;
+        }
+
+        public static Lata recolectarParametros()
+        {
+            Lata lata3 = new Lata();
+            Console.WriteLine("Por favor ingresar codigo");
+             lata3.Codigo = Console.ReadLine();
+            Console.WriteLine("Por favor ingresar nombre");
+            lata3.Nombre = Console.ReadLine();
+            Console.WriteLine("Por favor ingresar precio");
+             lata3.Precio = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Por favor ingresar volumen");
+            lata3.Volumen = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Por favor ingresar cantidad");
+            lata3.Cantidad = Convert.ToInt32(Console.ReadLine());
+            return lata3;
         }
     }
 }

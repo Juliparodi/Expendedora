@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExpendedoraLibrary.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,29 @@ namespace ExpendedoraLibrary.Entities
 
         public void agregarLata(Lata lata)
         {
+            this.capacidad = 10;
+            if (encendida.Equals(false))
+            {
+                throw new MaquinaApagadaException("La maquina se encuentra apagada");
+            } else if (this.latas.Any(lata2 => lata2.Codigo.Equals(lata.Codigo)))
+            {
+                throw new CodigoInvalidoException("El codigo ya existe");
+            } else if(this.latas.Count > this.capacidad)
+            {
+                throw new CapacidadInsuficienteException("La maquina ya esta llena");
+            }
 
+            this.Latas.Add(lata);
+        }
+
+        public void agregarLatas(List<Lata> latas)
+        {
+            if (encendida.Equals(false))
+            {
+                throw new MaquinaApagadaException("La maquina se encuentra apagada");
+            }
+
+            this.Latas = latas;
         }
 
         public Lata extraerLata(string proveedor, double dinero)
@@ -52,6 +75,7 @@ namespace ExpendedoraLibrary.Entities
 
         public void encenderMaquina()
         {
+            this.encendida = true;
 
         }
 

@@ -41,8 +41,7 @@ namespace ExpendedoraLibrary.Entities
 
         public string toString()
         {
-            return String.Format("lata con nombre: {0}, codigo: {1} , sabor {2} , precio: {3}" +
-                "volumen: {4} , cantidad: {5} ", this.nombre, this.codigo, this.sabor, this.precio, this.volumen, this.cantidad);
+            return String.Format("CODIGO){1}  {2}  [{3}]  ", this.codigo, this.descripcion, this.cantidad);
         }
     }
 }
