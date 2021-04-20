@@ -1,0 +1,6 @@
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraLibrary\obj\Debug\ExpendedoraLibrary.csprojAssemblyReference.cache
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraLibrary\obj\Debug\ExpendedoraLibrary.csproj.CoreCompileInputs.cache
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraLibrary\bin\Debug\ExpendedoraLibrary.dll
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraLibrary\bin\Debug\ExpendedoraLibrary.pdb
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraLibrary\obj\Debug\ExpendedoraLibrary.dll
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraLibrary\obj\Debug\ExpendedoraLibrary.pdb

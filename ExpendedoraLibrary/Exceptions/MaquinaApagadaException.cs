@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExpendedoraLibrary.Exceptions
 {
-    class MaquinaApagadaException : Exception
+    public class MaquinaApagadaException : Exception
     {
         public MaquinaApagadaException (string message) : base()
         {

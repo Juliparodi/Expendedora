@@ -1,6 +1,9 @@
 ﻿using ExpendedoraLibrary.Entities;
 using System;
 using System.Collections.Generic;
+using ExpendedoraLibrary.Validaciones;
+using ExpendedoraLibrary.Exceptions;
+
 
 namespace ExpendedoraConsole
 {
@@ -10,7 +13,7 @@ namespace ExpendedoraConsole
         {
             int opcion = -1;
             bool esValido = true;
-            bool salir = true;
+            bool salir = false;
 
             Expendedora expendedora = new Expendedora();
             List<Lata> latas = new List<Lata>();
@@ -18,9 +21,14 @@ namespace ExpendedoraConsole
             Lata lata2 = new Lata("02", "sprite", "limon", 10, 100, 100);
             latas.Add(lata);
             latas.Add(lata2);
+            expendedora.encenderMaquina();
             expendedora.agregarLatas(latas);
 
+            int numero = Validaciones.validarInt();
+            double numero2 = Validaciones.validarDouble();
+            long numero3 = Validaciones.validarLong();
 
+            Console.WriteLine("numero 1: {0}, numero 2: {1} , numero 3: {2}", numero, numero2, numero3);
 
             Console.Write("Bienvenido a la maquina expendedora mas premium de Argentina");
 
@@ -35,7 +43,7 @@ namespace ExpendedoraConsole
                     "\n  5 - conocer stock disponible" +
                      "\n  6 -  salir");
 
-                    do
+                do
                 {
                     try
                     {
@@ -47,7 +55,8 @@ namespace ExpendedoraConsole
                     catch (Exception ex)
                     {
                         throw new Exception("ocurrio un error al seleccionar la opcion, x favor intente devuelta");
-                    } while (!esValido);
+                    }
+                } while (!esValido);
 
                     switch (opcion)
                     {
@@ -62,22 +71,25 @@ namespace ExpendedoraConsole
                             break;
 
                         case 2:
-                            expendedora.agregarLata(recolectarParametros();
+                        try {
+                            expendedora.agregarLata(recolectarParametros());
+                            } catch (MaquinaApagadaException ex)
+                        {
+                            Console.WriteLine(ex);
+                        }
                             break;
-                            
-
-                           
-                    }
-                }
 
 
-            }
+
+                    } 
+
+            } while (salir);
 
         }
 
         public static Lata ingresarLata(Expendedora expendedora)
         {
-            Lata lata2 = new Lata;
+            Lata lata2 = new Lata();
             Console.Write("Agregar lata" +
                  "\n  por favor ingrese codigo, nombre, precio" +
                  "\n volumen y stock");
@@ -86,11 +98,11 @@ namespace ExpendedoraConsole
             Console.WriteLine("Ingrese nombre: ");
             lata2.Nombre = Console.ReadLine();
             Console.WriteLine("Ingrese nombre: ");
-            lata2.Cantidad = Convert.ToInt32(Console.ReadLine());
+            lata2.Cantidad = Validaciones.validarInt();
             Console.WriteLine("Ingrese nombre: ");
-            lata2.Precio = Convert.ToDouble(Console.ReadLine());
+            lata2.Precio = Validaciones.validarDouble();
             Console.WriteLine("Ingrese nombre: ");
-            lata2.Volumen = Convert.ToDouble(Console.ReadLine());
+            lata2.Volumen = Validaciones.validarDouble();
             return lata2;
         }
 
@@ -102,11 +114,11 @@ namespace ExpendedoraConsole
             Console.WriteLine("Por favor ingresar nombre");
             lata3.Nombre = Console.ReadLine();
             Console.WriteLine("Por favor ingresar precio");
-             lata3.Precio = Convert.ToDouble(Console.ReadLine());
+             lata3.Precio = Validaciones.validarDouble();
             Console.WriteLine("Por favor ingresar volumen");
-            lata3.Volumen = Convert.ToDouble(Console.ReadLine());
+            lata3.Volumen = Validaciones.validarDouble();
             Console.WriteLine("Por favor ingresar cantidad");
-            lata3.Cantidad = Convert.ToInt32(Console.ReadLine());
+            lata3.Cantidad = Validaciones.validarInt();
             return lata3;
         }
     }

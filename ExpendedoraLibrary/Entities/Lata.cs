@@ -41,7 +41,7 @@ namespace ExpendedoraLibrary.Entities
 
         public string toString()
         {
-            return String.Format("CODIGO){1}  {2}  [{3}]  ", this.codigo, this.descripcion, this.cantidad);
+            return String.Format("CODIGO){1}  {2}  [{3}]  ", this.codigo, this.nombre, this.cantidad);
         }
     }
 }

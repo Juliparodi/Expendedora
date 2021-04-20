@@ -16,6 +16,7 @@ namespace ExpendedoraLibrary.Entities
         bool encendida;
 
         public Expendedora() { }
+
         public Expendedora(List<Lata> latas, string proveedor, int capacidad, double dinero, bool encendida)
         {
             this.Latas = latas;
@@ -60,17 +61,17 @@ namespace ExpendedoraLibrary.Entities
 
         public Lata extraerLata(string proveedor, double dinero)
         {
-
+            return new Lata();
         }
 
         public string getBalance()
         {
-
+            return "hola";
         }
 
         public int getCapacidadRestante()
         {
-
+            return 1;
         }
 
         public void encenderMaquina()
@@ -81,12 +82,12 @@ namespace ExpendedoraLibrary.Entities
 
         public bool estaVacia()
         {
-
+            return true;
         }
 
         public List<Lata> listarLatas()
         {
-
+            return this.latas;
         }
     }
 }

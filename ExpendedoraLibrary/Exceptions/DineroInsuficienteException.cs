@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExpendedoraLibrary.Exceptions
 {
-    class DineroInsuficienteException : Exception
+   public class DineroInsuficienteException : Exception
     {
         public DineroInsuficienteException(String message) : base()
         {

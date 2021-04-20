@@ -1,0 +1,10 @@
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\obj\Debug\ExpendedoraConsole.csprojAssemblyReference.cache
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\obj\Debug\ExpendedoraConsole.csproj.CoreCompileInputs.cache
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\bin\Debug\ExpendedoraConsole.exe.config
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\bin\Debug\ExpendedoraConsole.exe
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\bin\Debug\ExpendedoraConsole.pdb
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\bin\Debug\ExpendedoraLibrary.dll
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\bin\Debug\ExpendedoraLibrary.pdb
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\obj\Debug\ExpendedoraConsole.csproj.CopyComplete
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\obj\Debug\ExpendedoraConsole.exe
+C:\Users\julia\CAI\repositorios\Expendedora\ExpendedoraConsole\obj\Debug\ExpendedoraConsole.pdb
